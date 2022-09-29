@@ -31,9 +31,9 @@ S. Gentili, P. Brondi, R. Di Giovambattista
 
 ##  Installation 
 
-Download or clone the NESTORE.zip file on your computer and 
-extract in a folder you prefer(e.g. NESTORE_FOLDER); no other 
-action is required. 
+Download NESTOREv1.0.zip and extract in a folder you prefer
+(e.g. NESTORE_FOLDER)or clone NESTORE repository on your 
+computer; no other action is required. 
 NESTORE has been tested on Matlab R2018a and later versions. 
 
 
