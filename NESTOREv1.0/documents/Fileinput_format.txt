@@ -1,0 +1,268 @@
+##############################################################
+-------------------- NESTORE's Fileinput structure -----------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In the USER folder, together with the run scripts for the 
+different modules, there are the inputfile examples. 
+Please modify the parameters as you prefer. If you save with 
+a different name, edit the corresponding run* scripts to modify
+the variable "fileinname".
+
+
+NESTORE has four input files corresponding to the four 
+different modules:
+
+fileinput_clus_identification.txt
+fileinput_training.txt
+fileinput_testing.txt
+fileinput_nrt_class.txt
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-------------------- Cluster Identification Module  ----------
+File fileinput_clus_identification.txt shows parameters and 
+laws for window-based cluster identification.
+After each comment, user can modify the parameters; please do 
+not modify the comment lines.
+
+         - CATALOG FILE NAME             
+             Input seismic catalog in zmap format
+			 
+         - OUTPUT CLUSTERS FILE NAME	 
+             Output cluster file, in the first column: 
+             0=o-mainshock 
+             1=aftershock 
+             2=strongest aftershock information 
+             3= cluster information 
+             4=foreschock
+             For more detais see clus_ident.m comments
+			 
+         - LOWER LIMIT ON MAINSHOCK MAGNITUDE (Mm) FOR 
+           CLUSTERS 
+             Minimum magnitude: NESTORE needs a completeness
+             magnitude Mm-2 (Mm=mainshock magnitude)
+			
+         - Mm VALUE FOR TIME DURATION FORM CHANGE (Thwt)
+             Modify it if the selected cluster identification
+             law is different depending on Mm 
+             (e.g. Gardner and Knopoff law)
+			 
+         - EQUATION FOR SPATIAL SELECTION OF AFTERSHOCKS 
+             Region-dependent equation for the radius of space 
+             window selection 
+			 
+         - EQUATION FOR TEMPORAL SELECTION OF AFTERSHOCKS IF 
+           Mm <Thwt
+             Region-dependent equation for time window 
+             selection if Mm <Thwt
+			 
+         - EQUATION FOR TEMPORAL SELECTION OF AFTERSHOCKS IF
+           Mm>=Thwt
+             Region-dependent equation for time window 
+             selection if Mm >=Thwt	
+             If no there is dependence of the selected law on 
+             Mm, type it equal to the previous one
+			 
+         - COEFFICIENT FOR SPATIAL SELECTION OF FORESHOCKS
+             Foreshock radius as a multiple of aftershock one
+             (in the example R_for=1.5*R_aft)
+			 
+         - TEMPORAL SELECTION OF FORESHOCKS [YEARS]	 
+             Time before the mainshock for foreshock detection
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-------------------- Training Module  ------------------------
+fileinput_training.txt 
+
+         - CLUSTER FILE NAME    
+		     Input file containing clusters for training and 
+             their information (output of cluster 
+             identification module)
+			 
+         - RES FILE NAME 
+             Common string in the name of the files where the
+             results should be stored
+			 
+         - AREA FILE NAME
+             Area where the analysis should be done (selection
+             on maishock position)
+			 
+         - MAXIMUM DEPTH 
+             maximum depth to be considered
+			 
+         - START TIME
+             starting year for the training
+			 
+         - END TIME
+             ending year for the training
+			 
+         - YEAR OF COMPLETENESS MAGNITUDE VARIATION
+           (YEARCHMC)
+             Modify it if to allow a different default 
+             completeness magnitude in the intervals 
+             [start,yearchMc) and [yearchMc, end]
+			 
+         - COMPLETENESS MAGNITUDE BEFORE YEARCHMC
+             Value of default completeness magnitude for 
+             years < YearchMc
+			 
+         - COMPLETENESS MAGNITUDE FOR YEARCHMC AND 
+           FOLLOWING YEARS
+             Value of default completeness magnitude for 
+             years >= YearchMc
+			 
+         - LABEL FOR CLUSTERS SELECTION
+             For debugging only: take this value = 2
+			 
+         - TIME INTERVALS VECTOR
+             Vector of time intervals starting from mainshock
+             origin time in which features are evaluated 
+             (e.g. 0.25 day, 0.50 day, 0.75 day, 1 day, 
+             2 days,3 days, 4 days, 5 days, 6 days, 7 days)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-------------------- Testing Module  -------------------------
+fileinput_testing.txt
+
+         - CLUSTER FILE NAME    
+             Input file containing clusters for testing and 
+             their information (output of cluster 
+             identification module)
+                        
+         - RES TRAINING FILE NAME					 
+             Name of the file used by training module. 
+             The algorithm uses it in order to generate
+             the names of the range, Thprob and NumAB files
+             (outputs of traning module)
+			 
+         - RES FILE NAME 
+             Common string in the name of the files where the
+             results should be stored
+			 
+         - AREA FILE NAME
+             area where the analysis should be done (selection
+             on maishock position)	 
+		 
+         - MAXIMUM DEPTH 
+             maximum depth to be considered
+			 
+         - START TIME
+		     starting year for the training
+			 
+         - END TIME
+             ending year for the training
+			 
+         - YEAR OF COMPLETENESS MAGNITUDE VARIATION (YEARCHMC)
+             Modify it if to allow a different default 
+             completeness magnitude in the intervals 
+             [start,yearchMc) and [yearchMc, end]
+			 
+         - COMPLETENESS MAGNITUDE BEFORE YEARCHMC
+             Value of default completeness magnitude for 
+             years < YearchMc
+			 
+         - COMPLETENESS MAGNITUDE FOR YEARCHMC AND 
+           FOLLOWING YEARS
+             Value of default completeness magnitude for 
+             years >= YearchMc
+			 
+         - LABEL FOR CLUSTERS SELECTION
+             For debugging only: take this value = 2
+			 
+         - TIME INTERVALS VECTOR
+             Vector of time intervals starting from mainshock 
+             origin time in which features are evaluated 
+             (e.g. 0.25 day, 0.50 day, 0.75 day, 1 day, 2 days
+             3 days, 4 days, 5 days, 6 days, 7 days)
+			 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-------------------- Near-Real-Time Module  ------------------
+fileinput_nrt_class.txt
+
+         - CATALOG FILE NAME             
+             Input seismic catalog in zmap format
+
+         - RES TRAINING FILE NAME					 
+             Name of the file used by training module. 
+             The algorithm uses it in order to generate
+             the names of the range, Thprob and NumAB files
+             (outputs of traning module)
+			 
+         - RES FILE NAME 
+             Common string in the name of the files where the
+             results should be stored
+			 
+         - LOWER LIMIT ON MAINSHOCK MAGNITUDE (Mm) FOR 
+           CLUSTERS 
+             Minimum magnitude: NESTORE needs a completeness
+             magnitude Mm-2 (Mm=mainshock magnitude)
+			
+         - Mm VALUE FOR TIME DURATION FORM CHANGE (Thwt)
+             Modify it if the selected cluster identification
+             law is different depending on Mm 
+             (e.g. Gardner and Knopoff law)
+			 
+         - EQUATION FOR SPATIAL SELECTION OF AFTERSHOCKS 
+             Region-dependent equation for the radius of space 
+             window selection 
+			 
+         - EQUATION FOR TEMPORAL SELECTION OF AFTERSHOCKS IF 
+           Mm <Thwt
+             Region-dependent equation for time window 
+             selection if Mm <Thwt
+			 
+         - EQUATION FOR TEMPORAL SELECTION OF AFTERSHOCKS IF
+           Mm>=Thwt
+             Region-dependent equation for time window 
+             selection if Mm >=Thwt	
+             If no there is dependence of the selected law on 
+             Mm, type it equal to the previous one
+			 
+         - COEFFICIENT FOR SPATIAL SELECTION OF FORESHOCKS
+             Foreshock radius as a multiple of aftershock one
+             (in the example R_for=1.5*R_aft)
+			 
+         - TEMPORAL SELECTION OF FORESHOCKS [YEARS]	 
+             Time before the mainshock for foreshock detection
+
+         - AREA FILE NAME
+             area where the analysis should be done (selection
+             on maishock position)	 
+		 
+         - MAXIMUM DEPTH 
+             maximum depth to be considered
+			 
+         - START TIME
+             starting year for the training
+			 
+         - END TIME
+             ending year for the training
+			 
+         - YEAR OF COMPLETENESS MAGNITUDE VARIATION (YEARCHMC)
+             Modify it if to allow a different default 
+             completeness magnitude in the intervals 
+             [start,yearchMc) and [yearchMc, end]
+			 
+         - COMPLETENESS MAGNITUDE BEFORE YEARCHMC
+             Value of default completeness magnitude for 
+             years < YearchMc
+			 
+         - COMPLETENESS MAGNITUDE FOR YEARCHMC AND 
+           FOLLOWING YEARS
+             Value of default completeness magnitude for 
+             years >= YearchMc
+			 
+         - LABEL FOR CLUSTERS SELECTION
+             For debugging only: take this value = 2
+			 
+         - TIME INTERVALS VECTOR
+             Vector of time intervals starting from mainshock 
+             origin time in which features are evaluated 
+             (e.g. 0.25 day, 0.50 day, 0.75 day, 1 day, 2 days
+             3 days, 4 days, 5 days, 6 days, 7 days)
+			 
+         - UPPERBOUND LIMIT FOR TIME INTERVALS
+             Upper limit for the available data to be used
+			 
+##############################################################                                      

@@ -1,0 +1,41 @@
+%--------------------CATALOG FILE NAME-----------------------
+Calif_NRT_Catalog.zmap
+%----------------RES TRAINING FILE NAME----------------------
+res_Calif_Sud_81_19
+%--------------------RES FILE NAME---------------------------
+res_Calif_NRT_Catalog
+%-LOWER LIMIT ON MAINSHOCK MAGNITUDE (Mm) FOR CLUSTERS ------
+4.0
+%------Mm VALUE FOR TIME DURATION FORM CHANGE (Thwt)---------
+6.5
+%--EQUATION FOR SPATIAL SELECTION OF AFTERSHOCKS ------------ 
+0.02*10.^(M/2)
+%-EQUATION FOR TEMPORAL SELECTION OF AFTERSHOCKS IF Mm <Thwt- 
+10.^(0.5409*M-0.547)
+%-EQUATION FOR TEMPORAL SELECTION OF AFTERSHOCKS IF Mm>=Thwt-  
+10.^(0.032*M+2.7389)
+%-----COEFFICIENT FOR SPATIAL SELECTION OF FORESHOCKS--------
+1.5  
+%-----COEFFICIENT FOR TEMPORAL SELECTION OF FORESHOCKS-------
+0.082
+%--------------------AREA FILE NAME--------------------------
+NorthSouthCalifornia_Area.dat
+%--------------------MAXIMUM DEPTH---------------------------
+30
+%--------------------START TIME------------------------------
+1970
+%--------------------END TIME--------------------------------
+2022
+%----YEAR OF COMPLETENESS MAGNITUDE VARIATION (YEARCHMC)-----
+1994
+%----------COMPLETENESS MAGNITUDE BEFORE YEARCHMC------------
+3.5
+%--COMPLETENESS MAGNITUDE FOR YEARCHMC AND FOLLOWING YEARS---
+3.5
+%---------------LABEL FOR CLUSTERS SELECTION-----------------
+2
+%---------------TIME INTERVALS VECTOR------------------------
+[0.25,0.50,0.75,1,2,3,4,5,6,7]
+%-----------UPPERBOUND LIMIT FOR TIME INTERVALS--------------
+0.75
+%%%PLEASE DO NOT MODIFY THE ABOVE COMMENT LINES!!

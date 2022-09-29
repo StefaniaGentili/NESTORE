@@ -1,0 +1,25 @@
+%--------------------CLUSTER FILE NAME-----------------------
+cluster_TEST_Calif_NS.dat
+%----------------RES TRAINING FILE NAME----------------------
+res_Calif_Sud_81_19
+%--------------------RES FILE NAME---------------------------
+res_TEST_Calif_Sud_NS
+%--------------------AREA FILE NAME--------------------------
+NorthSouthCalifornia_Area.dat
+%--------------------MAXIMUM DEPTH---------------------------
+30
+%--------------------START TIME------------------------------
+1981
+%--------------------END TIME--------------------------------
+2021
+%----YEAR OF COMPLETENESS MAGNITUDE VARIATION (YEARCHMC)-----
+1994
+%----------COMPLETENESS MAGNITUDE BEFORE YEARCHMC------------
+3.5
+%--COMPLETENESS MAGNITUDE FOR YEARCHMC AND FOLLOWING YEARS---
+3.5
+%---------------LABEL FOR CLUSTERS SELECTION-----------------
+2
+%---------------TIME INTERVALS VECTOR------------------------
+[0.25,0.50,0.75,1,2,3]
+%%%PLEASE DO NOT MODIFY THE ABOVE COMMENT LINES!!

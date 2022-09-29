@@ -1,0 +1,213 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+-------------------- NESTORE's Folders structure -------------
+
+NESTORE package is organized in four main folders: 
+- USER contains the run files of the different modules and the
+       user input data
+- SRC  contains the software codes
+- DATA stores the input and output data of the program; it is 
+       divided into sub-folders
+- DOCUMENTS documentation on the package
+
+PLEASE DO NOT MODIFY THE STRUCTURE OF THE FOLDERS
+  
+--------------------------------------------------------------
+---------------------------  USER  ---------------------------
+--------------------------------------------------------------
+In USER folder contains four scripts that correspond to the 
+four different modules of NESTORE
+ 
+1) clusters identification module -> run_clus_identification.m
+2) traning module                 -> run_training.m
+3) testing module                 -> run_testing.m
+4) near-real-time classif. module -> run_clus_identification.m
+
+Each script calls an input file containing the input data for 
+the module; the scripts can be edited for modifying the input 
+data name changing the string of the fileinname (e.g. in 
+run_training.m set fileinname='fileinput_my_new_training.txt')
+
+--------------------------------------------------------------
+---------------------------  SRC  ----------------------------
+--------------------------------------------------------------
+
+Contains:
+
+- source files
+- figures used by the code (traffic lights and logo)
+- EXTERNAL folder with the parts of the code already 
+  implemented in open-source libraries 
+	
+--------------------------------------------------------------  
+-------------------------- DATA ------------------------------
+--------------------------------------------------------------
+
+DATA folder is subdivided in four subfolders:
+       
+1) CATALOGS, which contains:
+
+     - Catalog file      input catalogue in zmap format 
+                         (Input of Cluster Identification 
+                         Module)
+
+
+2) CLUSTERS, which contains:
+
+     - Clusters'file     list of clusters labelling maishocks,
+                         aftershocks, foreshocks and 
+                         informations on clusters' 
+                         characteristics 
+                         (Output of Cluster Identification 
+                         Module - Input of Training Module)
+						 
+     - Analyzed Area File list of vertices of the polygon of 
+                         the analyzed area expressed in 
+                         longitude and latitude
+                         (Input of Training Module, Testing 
+                         Module, Near-Real-Time Module)
+
+
+3) TRAINING_OUTPUT, which contains:
+   
+     - res_files_no_stop files of the features for all time
+                         intervals Ti before the training 
+                         (Output of Training Module)
+
+     - res_files_stop    files of the features considering 
+                         the good interval selection 
+                         (Output of Training Module)
+
+     - range file        file of the final good interval 
+                         (Output of Training Module - 
+                         Input of Testing Module)
+
+     - Thprob file       file of the threshols and the 
+                         probability to be A under and over
+                         the threeshold
+                         (Output of Training Module - Input of
+                         Testing Module)
+
+     - NumAB file        Number of A and B in the training set
+                         for each time interval
+                         (Output of Training Module - Input of
+						 Testing Module)
+
+     - FIGURES Folder, which contains:
+                         -ROC Figures              
+                             ROC graph of the performances 
+                             (Output of Training Module)
+                         -Performance Figures      
+                             performances in terms of 
+                             precision, recall, accuracy and 
+                             informedness 
+                             (Output of Training Module)
+
+4) TESTING_OUTPUT, which contains:
+     - res_file_stop     files of the features considering the
+                         good interval selection of the 
+                         training   
+                         (Output of Testing Module)
+
+     - class_res         file showing the features and the 
+                         final classification of the clusters
+                         in the test set
+                         (Output of Testing Module)
+
+     - cm                confusion matrices for all the 
+                         feature classifiers and time period
+                         (Output of Testing Module)
+
+     - pre               matrix of the precision for all the 
+                         feature classifiers and time period
+                         (Output of Testing Module)
+
+     - pre               matrix of the recall for all the 
+                         feature classifiers and time period
+                         (Output of Testing Module)
+
+     - acc               matrix of the accuracy for all the 
+                         feature classifiers and time period
+                         (Output of Testing Module)
+
+     - inform            matrix of the informedness for all 
+                         the feature classifiers and time 
+                         interval
+                         (Output of Testing Module)
+
+     - FIGURES Folder, which contains:    
+                         -Classification in time     
+                             Probability that the cluster is A
+                             for all the clusters and the 
+                             analyzed time intervals
+                             (Output of Testing Module)
+
+                         -ROC figures                
+                             ROC graph of the performances
+                             (Output of Testing Module)
+
+                         -PR Figures                 
+                             Precision-Recall graph of the 
+                             performances
+                             (Output of Testing Module)
+
+
+5) NRT_OUTPUT 
+     - Clusters'file     clusters file of the first cluster in
+                         the catalogue 
+                         (Output of Near-Real-Time Module)
+						 
+     - res_file_stop     files of the features considering the
+                         good interval selection of the 
+                         training   
+                         (Output of Near-Real-Time Module)
+						 
+     - class_res         file showing the features and the 
+                         near-real-time classification of the 
+                         cluster 
+                         (Output of Near-Real-Time Module)
+
+     - FIGURES Folder, which contains:    
+                         -Cluster map              
+                             Map of the events in the cluster 
+                             in the time period selected by 
+                             the user
+                             (Output of Near-Real-Time Module)
+
+                         -Time-Magnitude plot      
+                             Plot of manitude vs time for the 
+                             events in the cluster in the time 
+                             period selected by the user
+                             (Output of Near-Real-Time Module)
+
+                         -Single feature classification  
+                             Bars corresponding to the 
+                             classification of each feature 
+                             classifier for different time 
+                             intervals
+                             (Output of Near-Real-Time Module)
+
+                         -Classification in time   
+                             Probability that the cluster is A
+                             for time intervals smaller or 
+                             equal to the time period selected 
+                             by the user
+                             (Output of Near-Real-Time Module)
+
+
+--------------------------------------------------------------
+---------------------------  DOCUMENTS  ----------------------
+--------------------------------------------------------------
+
+Contains:
+
+- ReadMe_NESTORE.txt     readme file
+
+- Fileinput_format.txt   detailed description of the input 
+                         files of the modules
+
+- Folder_struc.txt       description of the folder's stucture 
+                         and of where the input/output files 
+                         are stored
+
+- *ModuleScheme.pdf      scheme of functions and subfunctions 
+                         called by NESTORE modules

@@ -1,0 +1,23 @@
+%--------------------CLUSTER FILE NAME-----------------------
+cluster_cat_Calif_Sud_81_19.dat
+%--------------------RES FILE NAME---------------------------
+res_Calif_Sud_81_19
+%--------------------AREA FILE NAME--------------------------
+SouthCalifornia_Area.dat
+%--------------------MAXIMUM DEPTH---------------------------
+30
+%--------------------START TIME------------------------------
+1977
+%--------------------END TIME--------------------------------
+2019
+%----YEAR OF COMPLETENESS MAGNITUDE VARIATION (YEARCHMC)-----
+1994
+%----------COMPLETENESS MAGNITUDE BEFORE YEARCHMC------------
+3.0
+%--COMPLETENESS MAGNITUDE FOR YEARCHMC AND FOLLOWING YEARS---
+3.0
+%---------------LABEL FOR CLUSTERS SELECTION-----------------
+2
+%---------------TIME INTERVALS VECTOR------------------------
+[0.25,0.50,0.75,1,2,3,4,5,6,7]
+%%PLEASE DO NOT MODIFY THE ABOVE COMMENT LINES!!
