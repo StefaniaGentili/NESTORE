@@ -1,7 +1,7 @@
 %--------------------CATALOG FILE NAME-----------------------
-cat_Calif_Sud_1981_2019.zmap
+cat_Calif_Sud_1981_1985.zmap
 %-------------OUTPUT CLUSTERS FILE NAME----------------------
-cluster_cat_Calif_Sud_81_19.dat
+cluster_cat_Calif_Sud_81_85.dat
 %-LOWER LIMIT ON MAINSHOCK MAGNITUDE (Mm) FOR CLUSTERS ------
 4.0
 %------Mm VALUE FOR TIME DURATION FORM CHANGE (Thwt)---------
