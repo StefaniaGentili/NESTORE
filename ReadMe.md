@@ -1,5 +1,5 @@
 ![logo](NESTORE_logo.png)
-#  NESTORE PACKAGE README 
+#  NESTORE PACKAGE README [![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.7472134.svg)](https://zenodo.org/badge/doi/10.5281/zenodo.7472134.svg)
 MATLAB package able to forecast strong aftershocks starting from the first hours after the mainshocks
 
 ##  Software Description 
