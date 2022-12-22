@@ -8,13 +8,13 @@ authors:
 - family-names: "Brondi"
   given-names: "Piero"
   orcid: "https://https://orcid.org/0000-0002-2341-2900"
-title: StefaniaGentili/NESTORE: Reproducibility Package for NESTOREv1.0: A MATLAB package for strong forthcoming earthquake forecasting
+title: "NESTORE: Reproducibility Package for NESTOREv1.0: A MATLAB package for strong forthcoming earthquake forecasting"
 version: v1.0.0
 date-released: 2022-12-22
 doi: 10.5281/zenodo.7472134.svg
 preferred-citation:
 type: article
-title: 'NESTORE: Reproducibility Package for NESTOREv1.0: A MATLAB package for strong forthcoming earthquake forecasting'
+title: "NESTORE: Reproducibility Package for NESTOREv1.0: A MATLAB package for strong forthcoming earthquake forecasting"
 authors:
 - family-names: "Gentili"
   given-names: "Stefania"
