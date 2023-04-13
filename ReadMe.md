@@ -55,10 +55,28 @@ Please contact sgentili@ogs.it
 
 ##  Credits
 
-Please use the following citation for any use of this software 
-"NESTOREv1.0: A Matlab package to identify patterns for strong 
-following earthquake forecasting" by S. Gentili, P. Brondi, 
-R. Di Giovambattista
+Please use the following citation for any use of this software: 
+Stefania Gentili, Piero Brondi, Rita Di Giovambattista; 
+NESTOREv1.0: A MATLAB Package for Strong Forthcoming Earthquake Forecasting. 
+Seismological Research Letters 2023; doi: https://doi.org/10.1785/0220220327
+
+##  References
+* Gentili, S., and R. Di Giovambattista (2017). Pattern recognition
+approach to the subsequent event of damaging earthquakes in
+Italy, Phys. Earth Planet. In. 266, 1–17.
+
+* Gentili, S., and R. Di Giovambattista (2020). Forecasting strong aftershocks
+in earthquake clusters from northeastern Italy and western
+Slovenia, Phys. Earth Planet. In. 303, doi: 10.1016/j.pepi.2020.106483.
+
+* Gentili, S., and R. Di Giovambattista (2022). Forecasting strong subsequent
+earthquakes in California clusters by machine learning,
+Phys. Earth Planet. In. 327, doi: 10.1016/j.pepi.2022.106879.
+
+* Gentili, S., E. Anyfadi, P. Brondi, and F. Vallianatos (2023).
+Forecasting strong subsequent earthquakes in Greece using
+NESTORE machine learning algorithm, EGU General Assembly
+2023, Vienna, Austria, 23–28 April 2023.
 
 
 ##  Acknowledgments
