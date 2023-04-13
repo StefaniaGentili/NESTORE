@@ -8,21 +8,7 @@ authors:
   given-names: "Piero"
   orcid: "https://orcid.org/0000-0002-2341-2900"
 title: "NESTORE"
-version: v1.0
+version: 1.0.0
 doi: 10.5281/zenodo.7472134
 date-released: 2022-12-22
 url: "https://github.com/StefaniaGentili/NESTORE/"
-preferred-citation:
-  type: article
-  authors:
-  - family-names: "Gentili"
-    given-names: "Stefania"
-    orcid: "https://orcid.org/0000-0002-7740-7883"
-  - family-names: "Brondi"
-    given-names: "Piero"
-    orcid: "https://orcid.org/0000-0002-2341-2900"
-  - family-names: "Di Giovambattista"
-    given-names: "Rita"
-    orcid: "https://orcid.org/0000-0001-5622-1396"
-  journal: "Seismological Research Letters - under review"
-  year: 2022
